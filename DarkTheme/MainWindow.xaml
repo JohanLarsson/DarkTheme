@@ -64,19 +64,45 @@
             </TabItem>
 
             <TabItem Header="text">
-                <StackPanel Width="100" HorizontalAlignment="Left">
-                    <TextBox Text="TextBox" />
-                    <TextBox Text="TextBox disabled" IsEnabled="False" />
-                    <ComboBox Text="ComboBox">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" MinWidth="40" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="TextBox"/>
+                    <TextBox Grid.Row="0" Grid.Column="1"  Text="TextBox" />
+                    
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="TextBox"/>
+                    <TextBox Grid.Row="1" Grid.Column="2" Text="TextBox disabled" IsEnabled="False" />
+
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="TextBox"/>
+                    <ComboBox Grid.Row="2" Grid.Column="1" Text="ComboBox">
                         <ComboBoxItem Content="a" />
                         <ComboBoxItem Content="b" />
                         <ComboBoxItem Content="c" />
                     </ComboBox>
-                    <TextBlock Text="TextBlock" />
-                    <DatePicker />
-                    <DatePickerTextBox />
-                    <PasswordBox />
-                </StackPanel>
+
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="DatePicker" />
+                    <DatePicker Grid.Row="4" Grid.Column="1"  />
+
+                    <TextBlock Grid.Row="5" Grid.Column="0" Text="DatePickerTextBox" />
+                    <DatePickerTextBox Grid.Row="5" Grid.Column="1"/>
+
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="DatePickerTextBox" />
+                    <PasswordBox Grid.Row="6" Grid.Column="1" />
+                </Grid>
             </TabItem>
 
             <TabItem Header="ListBox">
