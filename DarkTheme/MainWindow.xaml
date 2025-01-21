@@ -64,7 +64,7 @@
             </TabItem>
 
             <TabItem Header="text">
-                <StackPanel>
+                <StackPanel Width="100" HorizontalAlignment="Left">
                     <TextBox Text="TextBox" />
                     <TextBox Text="TextBox disabled" IsEnabled="False" />
                     <ComboBox Text="ComboBox">
@@ -129,6 +129,25 @@
                         <TextBlock Text="TextBlock in GroupBox" />
                     </GroupBox>
                 </UniformGrid>
+            </TabItem>
+
+            <TabItem Header="Slider">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Slider x:Name="HorizontalSlider" Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Minimum="0" Maximum="1200" Value="800" />
+                    <Slider x:Name="VerticalSlider" Grid.Row="1" Grid.Column="0" Orientation="Vertical" Minimum="0" Maximum="1200" Value="800" />
+
+                    <ScrollViewer Grid.Row="1" Grid.Column="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                        <Rectangle Stroke="Yellow" StrokeThickness="2" Width="{Binding ElementName=HorizontalSlider, Path=Value}" Height="{Binding ElementName=VerticalSlider, Path=Value}" />
+                    </ScrollViewer>
+                </Grid>
             </TabItem>
         </TabControl>
     </DockPanel>
