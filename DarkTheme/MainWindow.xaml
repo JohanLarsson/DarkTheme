@@ -6,7 +6,127 @@
         xmlns:local="clr-namespace:DarkTheme"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Window.DataContext>
+        <local:MainViewModel />
+    </Window.DataContext>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="_Open" Command="Open" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <Separator/>
+                <MenuItem Header="A disabled menu item" IsEnabled="False" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <Separator/>
+                <MenuItem Header="MenuItem with many others">
+                    <MenuItem Header="Another MenuItem with many others">
+                        <MenuItem Header="MenuItem with many others">
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                        </MenuItem>
+                        <MenuItem Header="MenuItem with many others">
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                        </MenuItem>
+                        <MenuItem Header="MenuItem with many others">
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                        </MenuItem>
+                        <MenuItem Header="MenuItem with many others">
+                            <MenuItem Header="Another menuitem"/>
+                            <MenuItem Header="Another menuitem"/>
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Another menuitem"/>
+                    <MenuItem Header="Another menuitem"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Edit" IsEnabled="False">
+                <MenuItem Header="Another menuitem"/>
+                <MenuItem Header="Another menuitem"/>
+            </MenuItem>
+        </Menu>
 
-    </Grid>
+        <TabControl>
+            <TabItem Header="buttons">
+                <UniformGrid Rows="2">
+                    <Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Button Content="Button disabled" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <ToggleButton Content="ToggleButton" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <RepeatButton Content="RepeatButton" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <RadioButton Content="RadioButton 1" GroupName="RadioButtonGroup" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <RadioButton Content="RadioButton 2" GroupName="RadioButtonGroup" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <CheckBox Content="CheckBox" IsChecked="{Binding IsChecked}" />
+                </UniformGrid>
+            </TabItem>
+
+            <TabItem Header="text">
+                <UniformGrid Rows="2">
+                    <TextBox Text="TextBox" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <TextBox Text="TextBox disabled" IsEnabled="False" />
+                    <ComboBox Text="ComboBox">
+                        <ComboBoxItem Content="a" />
+                        <ComboBoxItem Content="b" />
+                        <ComboBoxItem Content="c" />
+                    </ComboBox>
+                    <TextBlock Text="TextBlock" />
+                </UniformGrid>
+            </TabItem>
+
+            <TabItem Header="ListBox">
+                <ListBox >
+                    <ListBoxItem Content="a" />
+                    <ListBoxItem Content="b" />
+                    <ListBoxItem Content="c" />
+                </ListBox>
+            </TabItem>
+
+            <TabItem Header="DataGrid">
+                <DataGrid ItemsSource="{Binding Items}" />
+            </TabItem>
+
+            <TabItem Header="TreeView">
+                <TreeView Margin="5">
+                    <TreeViewItem Header="My shopping list">
+                        <TreeViewItem Header="Some stuff"/>
+                        <TreeViewItem Header="Juice"/>
+                        <TreeViewItem Header="Iphone 4s"/>
+                        <TreeViewItem Header="Microwave"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="Reasons to dislike happy hardcore"/>
+                    <TreeViewItem Header="extra tree items 1">
+                        <TreeViewItem Header="extra tree items 2">
+                            <TreeViewItem Header="extra tree items 3">
+                                <TreeViewItem Header="extra tree items 4"/>
+                                <TreeViewItem Header="extra tree items 4"/>
+                                <TreeViewItem Header="extra tree items 4"/>
+                                <TreeViewItem Header="extra tree items 4"/>
+                            </TreeViewItem>
+                            <TreeViewItem Header="extra tree items 3"/>
+                            <TreeViewItem Header="extra tree items 3"/>
+                        </TreeViewItem>
+                        <TreeViewItem Header="extra tree items 2"/>
+                        <TreeViewItem Header="extra tree items 2"/>
+                        <TreeViewItem Header="extra tree items 2"/>
+                        <TreeViewItem Header="extra tree items 2"/>
+                    </TreeViewItem>
+                </TreeView>
+            </TabItem>
+
+            <TabItem Header="headered">
+                <UniformGrid Rows="2">
+                    <Expander Header="Expander">
+                        <TextBlock Text="TextBlock in Expander" />
+                    </Expander>
+
+                    <GroupBox Header="GroupBox">
+                        <TextBlock Text="TextBlock in GroupBox" />
+                    </GroupBox>
+                </UniformGrid>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
 </Window>
