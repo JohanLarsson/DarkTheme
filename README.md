@@ -1,6 +1,6 @@
 # DarkTheme
 
-Based on [this](https://github.com/AngryCarrot789/WPFDarkTheme)
+Based on [AngryCarrot789/WPFDarkTheme](https://github.com/AngryCarrot789/WPFDarkTheme)
 
 ![image](https://github.com/user-attachments/assets/1d886289-9f3b-4f3b-a853-5a9481e9cb7a)
 
