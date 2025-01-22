@@ -7,6 +7,7 @@ public class Item : INotifyPropertyChanged
 {
     private string _name;
     private int _score;
+    private bool _isWinner;
 
     public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -28,6 +29,17 @@ public class Item : INotifyPropertyChanged
         {
             if (value == _score) return;
             _score = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public bool IsWinner
+    {
+        get => _isWinner;
+        set
+        {
+            if (value == _isWinner) return;
+            _isWinner = value;
             OnPropertyChanged();
         }
     }

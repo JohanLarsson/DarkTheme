@@ -6,9 +6,11 @@
         xmlns:local="clr-namespace:DarkTheme"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Window.DataContext>
         <local:MainViewModel />
     </Window.DataContext>
+    
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="File">
@@ -85,9 +87,9 @@
                     <TextBox Grid.Row="0" Grid.Column="1"  Text="TextBox" />
                     
                     <TextBlock Grid.Row="1" Grid.Column="0" Text="TextBox"/>
-                    <TextBox Grid.Row="1" Grid.Column="2" Text="TextBox disabled" IsEnabled="False" />
+                    <TextBox Grid.Row="1" Grid.Column="1" Text="TextBox disabled" IsEnabled="False" />
 
-                    <TextBlock Grid.Row="2" Grid.Column="0" Text="TextBox"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="ComboBox"/>
                     <ComboBox Grid.Row="2" Grid.Column="1" Text="ComboBox">
                         <ComboBoxItem Content="a" />
                         <ComboBoxItem Content="b" />
@@ -100,7 +102,7 @@
                     <TextBlock Grid.Row="5" Grid.Column="0" Text="DatePickerTextBox" />
                     <DatePickerTextBox Grid.Row="5" Grid.Column="1"/>
 
-                    <TextBlock Grid.Row="6" Grid.Column="0" Text="DatePickerTextBox" />
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="PasswordBox" />
                     <PasswordBox Grid.Row="6" Grid.Column="1" />
                 </Grid>
             </TabItem>
@@ -115,6 +117,18 @@
 
             <TabItem Header="DataGrid">
                 <DataGrid ItemsSource="{Binding Items}" />
+            </TabItem>
+
+            <TabItem Header="ListView">
+                <ListView ItemsSource="{Binding Items}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="name" DisplayMemberBinding="{Binding Name}"/>
+                            <GridViewColumn Header="score" DisplayMemberBinding="{Binding Score}"/>
+                            <GridViewColumn Header="score" DisplayMemberBinding="{Binding IsWinner}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
             </TabItem>
 
             <TabItem Header="TreeView">
