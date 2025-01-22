@@ -99,7 +99,7 @@
                         </ComboBox>
 
                         <TextBlock Grid.Row="3" Grid.Column="0" Text="ComboBox"/>
-                        <ComboBox Grid.Row="3" Grid.Column="1" Text="ComboBox">
+                        <ComboBox Grid.Row="3" Grid.Column="1" Text="abc" Style="{StaticResource TextOnlyComboBox}">
                             <ComboBoxItem Content="abc" />
                             <ComboBoxItem Content="def" />
                             <ComboBoxItem Content="ghi" />
