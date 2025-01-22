@@ -5,9 +5,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources/SoftDark.xaml"/>
-                <ResourceDictionary Source="Resources/ControlColours.xaml"/>
-                <ResourceDictionary Source="Resources/Controls.xaml"/>
+                <ResourceDictionary Source="Resources/Dark.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

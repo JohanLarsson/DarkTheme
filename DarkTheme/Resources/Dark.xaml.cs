@@ -2,7 +2,7 @@
 
 using System.Windows;
 
-public partial class Controls
+public partial class Dark
 {
     private void OnMinimizeClick(object sender, RoutedEventArgs e)
     {
