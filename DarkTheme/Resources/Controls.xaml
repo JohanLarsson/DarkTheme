@@ -2967,6 +2967,9 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
+    <Thickness x:Key="MenuItem.TopLevelItem.Static.BorderThickness" Left="0" Top="0" Right="0" Bottom="0"/>
+    <Thickness x:Key="MenuItem.SubLevelItem.Static.BorderThickness" Left="0" Top="1" Right="0" Bottom="1"/>
+
     <Style TargetType="{x:Type MenuItem}">
         <Style.Triggers>
             <Trigger Property="IsCheckable" Value="True">

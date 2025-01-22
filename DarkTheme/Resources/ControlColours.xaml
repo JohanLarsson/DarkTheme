@@ -182,8 +182,6 @@
     <SolidColorBrush x:Key="GroupBox.Header.Static.Border.Disabled" Color="{DynamicResource AColour.Tone6.Border.Disabled}"/>
     <SolidColorBrush x:Key="GroupBox.Header.Foreground.Disabled" Color="{DynamicResource AColour.Foreground.Disabled}"/>
 
-    <Thickness x:Key="MenuItem.TopLevelItem.Static.BorderThickness" Left="0" Top="0" Right="0" Bottom="0"/>
-    <Thickness x:Key="MenuItem.SubLevelItem.Static.BorderThickness" Left="0" Top="1" Right="0" Bottom="1"/>
     <SolidColorBrush x:Key="Menu.Static.Background" Color="Transparent"/>
     <SolidColorBrush x:Key="MenuItem.Static.Background" Color="{DynamicResource AColour.Tone5.Background.Static}"/>
     <SolidColorBrush x:Key="MenuItem.IconBar.Static.Background" Color="{DynamicResource AColour.Tone6.Background.Static}"/>
