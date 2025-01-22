@@ -53,58 +53,67 @@
         </Menu>
 
         <TabControl>
-            <TabItem Header="buttons">
+            <TabItem Header="simple">
                 <UniformGrid Rows="2">
-                    <Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <Button Content="Button disabled" IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <StackPanel>
+                        <Button Content="Button" />
+                        <Button Content="Button disabled" IsEnabled="False" />
+                    </StackPanel>
+
                     <ToggleButton Content="ToggleButton" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     <RepeatButton Content="RepeatButton" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <RadioButton Content="RadioButton 1" GroupName="RadioButtonGroup" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <RadioButton Content="RadioButton 2" GroupName="RadioButtonGroup" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <CheckBox Content="CheckBox" IsChecked="{Binding IsChecked}" />
+                    <StackPanel>
+                        <RadioButton Content="RadioButton 1" GroupName="RadioButtonGroup" />
+                        <RadioButton Content="RadioButton 2" GroupName="RadioButtonGroup" />
+                        <CheckBox Content="CheckBox" IsChecked="{Binding IsChecked}" />
+                    </StackPanel>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" MinWidth="40" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="TextBox"/>
+                        <TextBox Grid.Row="0" Grid.Column="1"  Text="TextBox" />
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="TextBox"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="TextBox disabled" IsEnabled="False" />
+
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="ComboBox"/>
+                        <ComboBox Grid.Row="2" Grid.Column="1" Text="ComboBox">
+                            <ComboBoxItem Content="a" />
+                            <ComboBoxItem Content="b" />
+                            <ComboBoxItem Content="c" />
+                        </ComboBox>
+
+                        <TextBlock Grid.Row="3" Grid.Column="0" Text="ComboBox"/>
+                        <ComboBox Grid.Row="3" Grid.Column="1" Text="ComboBox">
+                            <ComboBoxItem Content="abc" />
+                            <ComboBoxItem Content="def" />
+                            <ComboBoxItem Content="ghi" />
+                        </ComboBox>
+                        
+                        <TextBlock Grid.Row="4" Grid.Column="0" Text="DatePicker" />
+                        <DatePicker Grid.Row="4" Grid.Column="1"  />
+
+                        <TextBlock Grid.Row="5" Grid.Column="0" Text="DatePickerTextBox" />
+                        <DatePickerTextBox Grid.Row="5" Grid.Column="1"/>
+
+                        <TextBlock Grid.Row="6" Grid.Column="0" Text="PasswordBox" />
+                        <PasswordBox Grid.Row="6" Grid.Column="1" />
+                    </Grid>
                 </UniformGrid>
-            </TabItem>
-
-            <TabItem Header="text">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" MinWidth="40" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Grid.Column="0" Text="TextBox"/>
-                    <TextBox Grid.Row="0" Grid.Column="1"  Text="TextBox" />
-                    
-                    <TextBlock Grid.Row="1" Grid.Column="0" Text="TextBox"/>
-                    <TextBox Grid.Row="1" Grid.Column="1" Text="TextBox disabled" IsEnabled="False" />
-
-                    <TextBlock Grid.Row="2" Grid.Column="0" Text="ComboBox"/>
-                    <ComboBox Grid.Row="2" Grid.Column="1" Text="ComboBox">
-                        <ComboBoxItem Content="a" />
-                        <ComboBoxItem Content="b" />
-                        <ComboBoxItem Content="c" />
-                    </ComboBox>
-
-                    <TextBlock Grid.Row="4" Grid.Column="0" Text="DatePicker" />
-                    <DatePicker Grid.Row="4" Grid.Column="1"  />
-
-                    <TextBlock Grid.Row="5" Grid.Column="0" Text="DatePickerTextBox" />
-                    <DatePickerTextBox Grid.Row="5" Grid.Column="1"/>
-
-                    <TextBlock Grid.Row="6" Grid.Column="0" Text="PasswordBox" />
-                    <PasswordBox Grid.Row="6" Grid.Column="1" />
-                </Grid>
             </TabItem>
 
             <TabItem Header="ListBox">
