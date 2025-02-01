@@ -19,3 +19,9 @@ Simple dark theme for copy.
         </ResourceDictionary>
     </Application.Resources>
 ```
+
+```xaml
+﻿<Window ...
+        Style="{StaticResource {x:Type Window}}">
+  ...
+```
